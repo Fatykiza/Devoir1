@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center ">
+      <h1><strong>INSCRIPTION A UN ATELIER</strong></h1>
+      <img src="https://img.freepik.com/photos-gratuite/ancien-atelier-outils-menuisier_114579-12146.jpg?semt=ais_hybrid&w=740&q=80" width="500" height="200">
+      <form action="https://www.youtube.com/">
+        <label for="nom">nom :</label><br />
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          placeholder="votre nom"
+          required
+        /><br />
+        <label for="mail">Email :</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="votre email"
+          required
+        /><br /><br>
+        <label for="tel">Numero_telephone :</label><br />
+        <input
+          type="tel"
+          id="telephone"
+          name="telephone"
+          placeholder="votre Numero_telephone"
+          required
+        /><br />
+        <label> Niveau :</label><br />
+        <label for="debutant"> debutant :</label>
+        <input type="radio" id="debutant" name="niveau" checked />
+        <label for="intermediaire">intermediaire :</label>
+        <input type="radio" id="intermediaire" name="niveau" />
+        <label for="avance">avance :</label>
+        <input type="radio" id="avence" name="niveau"  /><br />
+        <label>Language connus</label><br />
+         <input type="checkbox" id="HTML" name="Language" checked/>
+        <label for="HTML">HTML</label>
+         <input type="checkbox" id="CSS" name="Language"  />
+        <label for="CSS">CSS </label>
+       <input type="checkbox" id="JS" name="Language"  /> 
+        <label for="JS">JS </label><br>
+        
+        <label for="pays">Pays :</label><br />
+       
+        <select id="pays" name="pays" required>
+          <option value="France">France</option>
+          <option value="RDC">RDC</option>
+          <option value="CAMEROUN">CAMEROUN</option>
+
+        </select><br></br>
+        <label for="message">message</label><br></br>
+        <textarea  id="message" name="message" rows="10" cols="20"></textarea><br></br>
+        <button type="submit">Envoyer</button>
+
+      </form>
+    </div>
+  </body>
+</html>
