@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Page avec des &lt;div&gt; (à remplacer par des balises sémantiques)
+    </title>
+    <style>
+      :root {
+        --accent: #2b6cb0;
+        --muted: #6b7280;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        line-height: 1.5;
+        margin: 0;
+        color: #111;
+        background: #f7fafc;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 24px auto;
+        padding: 16px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--accent);
+      }
+      .search input {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+      }
+
+      /* Nav */
+      .nav {
+        display: flex;
+        gap: 12px;
+        padding: 8px 0;
+      }
+      .nav a {
+        padding: 8px 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .nav a:hover {
+        background: #fff;
+        border: 1px solid #e6eef9;
+        color: var(--accent);
+      }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 16px;
+        margin: 18px 0;
+        align-items: center;
+      }
+      .hero .hero-card {
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+      }
+      .hero h1 {
+        margin: 0 0 8px 0;
+      }
+      .cta {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Layout */
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 18px;
+      }
+      .content {
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+      }
+      .article {
+        margin-bottom: 12px;
+      }
+      .article h2 {
+        margin: 0 0 8px 0;
+      }
+      .article p {
+        margin: 0 0 8px 0;
+        color: #333;
+      }
+
+      .sidebar {
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+      }
+      .card {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #eef2f7;
+        margin-bottom: 10px;
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 18px;
+        padding: 16px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 800px) {
+        .hero,
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header">
+          <h1 class="brand">MonSite (div.header)</h1>
+          <div class="search">
+            <input type="search" placeholder="Rechercher..." />
+          </div>
+        </div>
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+          <a href="#">Accueil</a>
+          <a href="#">Articles</a>
+          <a href="#">À propos</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <div class="hero">
+          <section class="hero-card">
+            <h1>Bienvenue sur la page (tous en &lt;div&gt;)</h1>
+            <p>
+              Voici une maquette construite uniquement avec des
+              <code>&lt;div&gt;</code>. Ton challenge : remplacer les bonnes div
+              par des balises sémantiques (<code>&lt;header&gt;</code>,
+              <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+              <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>,
+              <code>&lt;footer&gt;</code>).
+            </p>
+            <a class="cta" href="#">Je relève le défi</a>
+          </section>
+
+          <div class="card">
+            <strong>Info rapide</strong>
+            <p
+              style="margin: 8px 0 0 0; color: var(--muted); font-size: 0.95rem"
+            >
+              Utilise l'inspecteur pour repérer les div à remplacer.
+            </p>
+          </div>
+        </div>
+
+        <section class="layout">
+          <div class="content">
+            <article class="article">
+              <h2>Article principal (div.article)</h2>
+              <p>
+                Contenu d'exemple : Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam.
+              </p>
+            </article>
+
+            <article class="article">
+              <h2>Deuxième article</h2>
+              <p>
+                Autre contenu : Sed nisi. Nulla quis sem at nibh elementum
+                imperdiet. Duis sagittis ipsum.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Liste d'articles</h3>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 8px;
+                  margin-top: 8px;
+                "
+              >
+                <div
+                  style="
+                    padding: 8px;
+                    border-radius: 8px;
+                    border: 1px solid #eef2f7;
+                  "
+                >
+                  Article A (div)
+                </div>
+                <div
+                  style="
+                    padding: 8px;
+                    border-radius: 8px;
+                    border: 1px solid #eef2f7;
+                  "
+                >
+                  Article B (div)
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <aside class="sidebar">
+            <div class="card">
+              <strong>À la une</strong>
+              <p style="margin: 8px 0 0 0">
+                Article intéressant, résumé rapide.
+              </p>
+            </div>
+            <div class="card">
+              <strong>Tags</strong>
+              <p style="margin: 8px 0 0 0; color: var(--muted)">
+                html, css, accesibilite
+              </p>
+            </div>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © 2025 MonSite — construit uniquement avec des &lt;div&gt; pour
+        l'exercice.
+      </footer>
+    </div>
+  </body>
+</html>
