@@ -1,0 +1,20 @@
+
+h1{
+    text-align: left;
+    color: green;
+    margin: 5px;
+}
+#fafa{
+    border-radius: 50%;
+    width: 150px;  
+}
+.carte-profil{
+    background-color: rgb(207, 207, 190);
+    text-align: center;
+    height: 300px;
+    width:  30%;
+    border:5px solid black;
+    border-radius: 5%;
+    padding: 20px; 
+}
+

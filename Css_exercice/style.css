@@ -1,0 +1,22 @@
+.intro {
+    background-color: greenyellow;
+    width: 500px;
+    margin-top: 50px;
+    height: 100vh;
+    font-size: 2rem;  
+}
+.intro div{
+    background-color: yellow;
+    width: 50%;
+}
+.intro h2{
+    
+    font-size: 1em;
+    background-color: #ffb000;
+}
+.intro p{
+    font-size: 0.5em;
+    background-color: rgb(157, 142, 142);
+    font-weight: bold;
+    font-style: italic;
+}
